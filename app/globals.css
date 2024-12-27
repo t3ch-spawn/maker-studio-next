@@ -152,13 +152,9 @@ body {
 .word,
 .heading-anim,
 .para-anim {
-  will-change: transform;
+  /* will-change: transform; */
 }
 
 .will-anim {
-  will-change: transform;
-}
-
-.text-indent {
-  text-indent: 13.5vw;
+  /* will-change: transform; */
 }
