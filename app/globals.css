@@ -136,12 +136,12 @@ body {
 }
 
 .line {
-  overflow: hidden;
-  display: inline-block !important;
+  /* overflow: hidden;
+  display: inline-block !important; */
 }
 
 .heading-anim {
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .word,

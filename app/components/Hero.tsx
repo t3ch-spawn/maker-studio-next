@@ -87,11 +87,11 @@ export default function Hero() {
   });
 
   return (
-    <section className="bg-[#0F0F0F] h-[100vh] relative flex flex-col items-center gap-[50px] justify-between pt-[107px] pb-[58px]">
+    <section className="bg-[#0F0F0F] h-[100vh] relative flex flex-col items-center gap-[50px] justify-end pt-[107px] pb-[58px]">
       {/*Big image logo that spins */}
       <Image
         src={logo}
-        className=" hero-logo relative top-[42%] translate-y-[-50%]  justify-self-center -1024:max-w-[250px]"
+        className=" hero-logo absolute top-[42%] translate-y-[-50%] -1024:max-w-[250px]"
         alt=""
       />
 
