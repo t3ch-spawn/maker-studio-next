@@ -6,6 +6,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ArrowSvg from "./reusables/ArrowSvg";
 import { ScrollToPlugin, ScrollTrigger } from "gsap/all";
+import Lenis from "lenis";
 
 export default function Navbar() {
   const navLinks = [
@@ -16,6 +17,7 @@ export default function Navbar() {
   ];
 
   const [date, setDate] = useState("0:00:00");
+  const navDeskTimeline = useRef<GSAPTimeline>(null);
 
   useEffect(() => {
     function formatDate(): string {
@@ -98,6 +100,69 @@ export default function Navbar() {
       });
     });
 
+    // Animation for menu click on desktop
+    navDeskTimeline.current = gsap
+      .timeline({ paused: true })
+      .to(".nav-link div", {
+        y: 20,
+        stagger: 0.1,
+      })
+
+      .to(
+        ".nav-link-container",
+        {
+          y: 0,
+        },
+        0
+      )
+      .to(
+        ".menu-btn-desk",
+        {
+          y: 0,
+          opacity: 1,
+          pointerEvents: "all",
+        },
+        0
+      )
+      .to(
+        ".nav-link",
+        {
+          pointerEvents: "none",
+        },
+        0
+      );
+
+    const navLinkCont = document.querySelector(".nav-link-container");
+
+    // Animation for when you scroll a bit to convert to menu
+    gsap.to(".nav-trigger", {
+      scrollTrigger: {
+        trigger: ".nav-trigger",
+        start: "top 50%",
+        scrub: true,
+        onEnter: () => {
+          navDeskTimeline.current?.play();
+          navLinkCont?.classList.add("passed-hero");
+        },
+
+        onEnterBack: () => {
+          navDeskTimeline.current?.reverse();
+          navLinkCont?.classList.remove("passed-hero");
+        },
+      },
+    });
+
+    const lenis = new Lenis({
+      autoRaf: true,
+    });
+
+    // // Listen for the scroll event and return list back to menu
+    lenis.on("scroll", (e) => {
+      if (navLinkCont?.classList.contains("passed-hero")) {
+        navDeskTimeline.current?.play();
+      }
+    });
+
     // Cleanup function to clear the interval on unmount
     return () => clearInterval(intervalId);
   }, []);
@@ -108,25 +173,46 @@ export default function Navbar() {
       <p className="text-[16px] font-medium invert">The Maker Studio</p>
 
       {/* TIme in the middle */}
-      <p className="text-[13px] font-medium font-ibm invert">LOS, {date}</p>
+      <p className="text-[13px] font-medium font-ibm invert -768:hidden">
+        LOS, {date}
+      </p>
 
-      {/* List on the right */}
-      <ul className="flex flex-col gap-[5px] items-end font-medium text-[13px] font-ibm">
-        {navLinks.map((link, idx) => {
-          return (
-            <li
-              key={idx}
-              data-id={link.id}
-              className=" nav relative flex nav-link gap-[5px] ease-in-out opacity-50 duration-300"
-            >
-              <ArrowSvg
-                className={`nav-arrow scale-75 opacity-0 translate-x-[10px] duration-300`}
-              />
-              <p className="uppercase invert cursor-pointer"> {link.name}</p>
-            </li>
-          );
-        })}
-      </ul>
+      {/* Container for Menu and list items */}
+      <div className="flex flex-col items-end">
+        <div
+          onClick={() => {
+            if (!navDeskTimeline.current) return;
+            navDeskTimeline.current.reverse();
+          }}
+          className="flex font-medium font-ibm gap-[5px] items-center justify-center invert cursor-pointer menu-btn-desk translate-y-[20px] opacity-0 pointer-events-none"
+        >
+          <div className="bg-white h-[5px] w-[5px] rounded-full"></div>
+          <p>MENU</p>
+        </div>
+
+        {/* List on the right */}
+        <ul className="flex flex-col gap-[5px] items-end font-medium text-[13px] font-ibm nav-link-container translate-y-[-20px]">
+          {navLinks.map((link, idx) => {
+            return (
+              <li
+                key={idx}
+                data-id={link.id}
+                className="relative nav-link ease-in-out duration-300 overflow-hidden pointer-events-all"
+              >
+                <div className="flex gap-[5px] items-center justify-center">
+                  <ArrowSvg
+                    className={`nav-arrow scale-75 opacity-0 translate-x-[10px] duration-300`}
+                  />
+                  <p className="uppercase invert cursor-pointer ">
+                    {" "}
+                    {link.name}
+                  </p>
+                </div>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </nav>
   );
 }

@@ -28,9 +28,9 @@ export default function CustomCursor() {
 
   return (
     <>
-      <div className="custom-cursor invert fixed bg-transparent border-[1px] border-black rounded-full h-[30px] w-[30px] translate-x-[-50%] translate-y-[-50%]  z-[210] pointer-events-none"></div>
+      <div className="custom-cursor invert fixed bg-transparent border-[1px] border-black rounded-full h-[30px] w-[30px] translate-x-[-50%] translate-y-[-50%]  z-[210] pointer-events-none -1024:hidden"></div>
 
-      <div className="cursor-dot should-move invert h-[5px] w-[5px] fixed bg-black rounded-[50%] pointer-events-none z-[215] translate-x-[-50%] translate-y-[-50%]"></div>
+      <div className="cursor-dot should-move invert h-[5px] w-[5px] fixed bg-black rounded-[50%] pointer-events-none z-[215] translate-x-[-50%] translate-y-[-50%] -1024:hidden"></div>
     </>
   );
 }

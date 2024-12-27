@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
@@ -72,19 +72,18 @@ export default function Footer() {
       });
     });
   });
-  
 
   return (
     <footer
-      className="bg-[#0F0F0F] text-white pt-[150px] pb-[36px] z-[10] section"
+      className="bg-[#0F0F0F] text-white pt-[150px] pb-[36px] z-[10] section -1024:px-[40px] -600:px-[18px]"
       id="contact"
     >
-      {/* ACtual container for footer content */}
+      {/* Actual container for footer content */}
       <div className="w-full max-w-[920px] flex flex-col mx-auto main-footer-container">
         {/* Heading */}
-        <div className="max-w-[295px] text-4xl cursor-pointer">
+        <div className="max-w-[295px] text-4xl -600:text-[24px] cursor-pointer leading-[100%] -600:leading-[120%]">
           <h1>Starting a project? </h1>
-          <h1 className="mt-[9px] line-anim arrow-line flex items-center gap-[12px]">
+          <h1 className="mt-[9px] -600:mt-0 line-anim arrow-line flex items-center gap-[12px]">
             <ArrowSvg
               stroke="white"
               className="scale-[1.8] glitch-arrow  opacity-0 absolute right-[110%] top-[27%]"
@@ -98,14 +97,14 @@ export default function Footer() {
         </div>
 
         {/* Container for the 3 lines */}
-        <div className="flex gap-[18px] mt-[94px]">
-          <hr className="w-full max-w-[295px]" />
-          <hr className="w-full max-w-[295px]" />
-          <hr className="w-full max-w-[295px]" />
+        <div className="flex gap-[18px] mt-[94px] -968:mt-[56px]">
+          <hr className="w-full max-w-[295px] -968:max-w-full" />
+          <hr className="w-full max-w-[295px] -968:hidden" />
+          <hr className="w-full max-w-[295px] -968:hidden" />
         </div>
 
         {/* Container for links and address */}
-        <div className="flex gap-[99px] mt-[56px] cursor-pointer">
+        <div className="flex gap-[99px] mt-[56px] cursor-pointer -968:flex-col -968:gap-[36px]">
           {/* Address */}
           <div className="w-full max-w-[215px] address-cont">
             <h2 className="mini-heading cursor-text">/ ADDRESS</h2>

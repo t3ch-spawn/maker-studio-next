@@ -69,8 +69,8 @@ export default function Expertise() {
       </h1>
 
       {/* Container for big paragraph */}
-      <div className="big-para w-[90%] mt-[80px] ">
-        <p className="heading-anim split mr-[134px] pl-[13vw]">
+      <div className="big-para w-[90%] -600:w-full mt-[80px] ">
+        <p className="heading-anim split pl-[13vw] -968:pl-0">
           We craft, scale, and transform
         </p>
         <p className="text-left heading-anim split">
@@ -80,7 +80,7 @@ export default function Expertise() {
       </div>
 
       {/* Container for list of services on the right and picture on the left */}
-      <div className="mt-[128px] flex justify-between items-start w-full gap-[20px] -1024:gap-[150px]">
+      <div className="mt-[128px] -968:mt-[64px] flex justify-between items-start w-full -1024:gap-[150px]">
         {/* container for pictures on the left */}
         <div className="flex flex-col min-w-[450px] -968:hidden">
           <ParallaxContainer
@@ -104,23 +104,20 @@ export default function Expertise() {
         </div>
 
         {/* List on the right */}
-        <div className="flex flex-col gap-[72px] w-full items-start ">
+        <div className="flex flex-col gap-[72px] -600:gap-[48px] w-full items-start text-[20px] -600:text-[16px]">
           {/* First line */}
           <hr className="border-[#0000001A] w-full" />
 
           {/* Branding */}
-          <div className="flex justify-around w-full max-w-[686px] ml-auto gap-[9vw] mb-[196px] -1024:flex-col">
-            <h2 className="text-[20px] font-medium mb-[12px] w-[266px] -1250:w-[130px] -1024:w-fit">
+          <div className="flex justify-around w-full max-w-[686px] ml-auto -968:ml-0 gap-[9vw] mb-[196px] -968:mb-0 -1024:flex-col -1024:gap-[24px]">
+            <h2 className=" font-medium mb-[12px] w-[266px] -1250:w-[130px] -1024:w-fit ml-[20px] -600:mb-0">
               Branding
             </h2>
 
             <ul className="w-[305px]">
               {branding.map((item, idx) => {
                 return (
-                  <li
-                    key={idx}
-                    className="flex gap-[10px] items-center text-[20px]"
-                  >
+                  <li key={idx} className="flex gap-[12px] items-center ">
                     <div className="border-[#00000066] border-[1px] rounded-full h-[10px] w-[10px]"></div>
                     <p>{item}</p>
                   </li>
@@ -132,18 +129,15 @@ export default function Expertise() {
           <hr className="border-[#0000001A] w-full mt-[24px]" />
 
           {/* Creative Design */}
-          <div className="flex justify-around w-full max-w-[686px] ml-auto gap-[9vw] mb-[196px] -1024:flex-col">
-            <h2 className="text-[20px] font-medium mb-[12px] w-[266px] -1250:w-[130px] -1024:w-fit">
+          <div className="flex justify-around w-full max-w-[686px] ml-auto -968:ml-0 gap-[9vw] mb-[196px] -968:mb-0 -1024:flex-col -1024:gap-[24px]">
+            <h2 className=" font-medium mb-[12px] w-[266px] -1250:w-[130px] -1024:w-fit ml-[20px] -600:mb-0">
               Creative Design
             </h2>
 
             <ul className="w-[305px]">
               {creativeDesign.map((item, idx) => {
                 return (
-                  <li
-                    key={idx}
-                    className="flex gap-[10px] items-center text-[20px]"
-                  >
+                  <li key={idx} className="flex gap-[12px] items-center ">
                     <div className="border-[#00000066] border-[1px] rounded-full h-[10px] w-[10px]"></div>
                     <p>{item}</p>
                   </li>
@@ -152,21 +146,18 @@ export default function Expertise() {
             </ul>
           </div>
 
-          <hr className="border-[#0000001A] w-full mt-[-15px]" />
+          <hr className="border-[#0000001A] w-full mt-[-15px] -968:mt-0" />
 
           {/* Product Development */}
-          <div className="flex justify-around w-full max-w-[686px] ml-auto  gap-[9vw] mb-[196px] -1024:flex-col">
-            <h2 className="text-[20px] font-medium mb-[12px] w-[266px] -1250:w-[130px] -1024:w-fit">
+          <div className="flex justify-around w-full max-w-[686px] ml-auto -968:ml-0  gap-[9vw] mb-[196px] -968:mb-0 -1024:flex-col -1024:gap-[24px]">
+            <h2 className=" font-medium mb-[12px] w-[266px] -1250:w-[130px] -1024:w-fit ml-[20px] -600:mb-0">
               Product Development
             </h2>
 
             <ul className="w-[305px]">
               {productDev.map((item, idx) => {
                 return (
-                  <li
-                    key={idx}
-                    className="flex gap-[10px] items-center text-[20px]"
-                  >
+                  <li key={idx} className="flex gap-[12px] items-center ">
                     <div className="border-[#00000066] border-[1px] rounded-full h-[10px] w-[10px]"></div>
                     <p>{item}</p>
                   </li>

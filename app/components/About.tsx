@@ -16,7 +16,7 @@ export default function About() {
         <p className="heading-anim split pl-[12.5vw] -968:pl-0">
           We deliver exceptional product execution
         </p>
-        <p className="heading-anim split w-[90%] text-left">
+        <p className="heading-anim split w-[90%] -600:w-full text-left">
           that transforms founders’ ambitions into reality, guiding companies
           from concept to launch.
         </p>

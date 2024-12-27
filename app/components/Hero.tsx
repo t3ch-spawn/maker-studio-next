@@ -18,18 +18,18 @@ export default function Hero() {
       autoRaf: true,
     });
 
-    // // Listen for the scroll event and remove opacity of nav
-    lenis.on("scroll", (e) => {
-      if (e.direction === 1) {
-        gsap.to(".nav-desk", {
-          opacity: 0,
-        });
-      } else if (e.direction === -1) {
-        gsap.to(".nav-desk", {
-          opacity: 1,
-        });
-      }
-    });
+    // // // Listen for the scroll event and remove opacity of nav
+    // lenis.on("scroll", (e) => {
+    //   if (e.direction === 1) {
+    //     gsap.to(".nav-desk", {
+    //       opacity: 0,
+    //     });
+    //   } else if (e.direction === -1) {
+    //     gsap.to(".nav-desk", {
+    //       opacity: 1,
+    //     });
+    //   }
+    // });
   }, []);
 
   gsap.registerPlugin(ScrollTrigger);
@@ -54,6 +54,9 @@ export default function Hero() {
         duration: 2.2,
         opacity: 0,
 
+        onStart: () => {
+          ScrollTrigger.refresh();
+        },
         scrollTrigger: {
           trigger: heading.classList.contains("hero") ? "body" : heading,
           start: "top 70%",
@@ -91,7 +94,7 @@ export default function Hero() {
       {/*Big image logo that spins */}
       <Image
         src={logo}
-        className=" hero-logo absolute top-[42%] translate-y-[-50%] -1024:max-w-[250px]"
+        className=" hero-logo absolute top-[42%] translate-y-[-50%] -1024:max-w-[250px] -600:max-w-[196px]"
         alt=""
       />
 
@@ -99,7 +102,7 @@ export default function Hero() {
       <div className="flex w-full justify-between items-end text-white px-[24px] ">
         {/* Left part with heading and paragraph */}
         <div className="flex flex-col gap-[19px] ">
-          <p className="text-[13px] flex items-center font-ibm uppercase font-medium para-anim hero split">
+          <p className="text-[13px] flex items-center font-ibm uppercase font-medium para-anim hero split nav-trigger">
             0
             <span className="mx-[5px]">
               <ArrowSvg stroke="white" />
@@ -112,7 +115,7 @@ export default function Hero() {
         </div>
 
         {/* Right part with scroll down */}
-        <div className="flex justify-center items-center gap-[9px]">
+        <div className="flex justify-center items-center gap-[9px] -768:hidden">
           <p>Scroll down</p>
           <Image src={scroll_down} className="mt-[8px]" alt="" />
         </div>

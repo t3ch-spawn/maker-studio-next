@@ -16,7 +16,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.png" />
       </head>
-      <body className={` antialiased`}>{children}</body>
+      <body className={` antialiased custom-scroll`}>{children}</body>
     </html>
   );
 }
