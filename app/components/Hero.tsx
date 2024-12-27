@@ -54,9 +54,6 @@ export default function Hero() {
         duration: 2.2,
         opacity: 0,
 
-        onStart: () => {
-          ScrollTrigger.refresh();
-        },
         scrollTrigger: {
           trigger: heading.classList.contains("hero") ? "body" : heading,
           start: "top 70%",
