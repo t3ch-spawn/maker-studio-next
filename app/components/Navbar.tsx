@@ -8,6 +8,9 @@ import ArrowSvg from "./reusables/ArrowSvg";
 import { ScrollToPlugin, ScrollTrigger } from "gsap/all";
 import Lenis from "lenis";
 
+
+gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollToPlugin);
 export default function Navbar() {
   const navLinks = [
     { name: "About us", id: "about" },
@@ -44,8 +47,7 @@ export default function Navbar() {
       setDate(formatDate());
     }, 1000);
 
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.registerPlugin(ScrollToPlugin);
+   
 
     // adding logic for when to show arrow on section
     const allSections = document.querySelectorAll(".section");

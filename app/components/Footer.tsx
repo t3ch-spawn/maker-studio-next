@@ -6,8 +6,9 @@ import gsap from "gsap";
 import React from "react";
 import ArrowSvg from "./reusables/ArrowSvg";
 
+gsap.registerPlugin(ScrollTrigger);
+
 export default function Footer() {
-  gsap.registerPlugin(ScrollTrigger);
   useGSAP(() => {
     // parallax effect for footer
     gsap.from(".main-footer-container", {

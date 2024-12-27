@@ -10,8 +10,9 @@ import { ScrollTrigger } from "gsap/all";
 import ArrowSvg from "./reusables/ArrowSvg";
 import Image, { StaticImageData } from "next/image";
 
+gsap.registerPlugin(ScrollTrigger);
+
 export default function Works() {
-  gsap.registerPlugin(ScrollTrigger);
   useGSAP(() => {
     const allScreens = document.querySelectorAll(".works-screen");
 

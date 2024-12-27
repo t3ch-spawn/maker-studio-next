@@ -13,14 +13,14 @@ interface PropsTypes {
   imgClass?: string;
 }
 
+gsap.registerPlugin(ScrollTrigger);
+
 export default function ParallaxContainer({
   imgSrc,
   className,
   percent = -15,
   imgClass,
 }: PropsTypes) {
-  gsap.registerPlugin(ScrollTrigger);
-
   const contRef = useRef(null);
   const picRef = useRef<HTMLImageElement>(null);
   const [height, setHeight] = useState(0);

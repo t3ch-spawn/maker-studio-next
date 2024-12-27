@@ -11,6 +11,8 @@ import { useGSAP } from "@gsap/react";
 import Image, { StaticImageData } from "next/image";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
+gsap.registerPlugin(Draggable);
+
 export default function Playground() {
   return (
     <section className="bg-[#F2F2F2] pt-[150px] relative z-[15] pb-[30px]">
@@ -66,7 +68,6 @@ interface SquareTypes {
 }
 
 function PlaySquare({ descrip, imgClass, imgSrc, className }: SquareTypes) {
-  gsap.registerPlugin(Draggable);
 
   const squareRef = useRef<HTMLDivElement>(null);
   const velocity = useRef({ x: 0, y: 0 }); // Store velocity for inertia

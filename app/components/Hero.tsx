@@ -10,9 +10,9 @@ import Image from "next/image";
 import Lenis from "lenis";
 import { CustomEase, ScrollTrigger } from "gsap/all";
 import SplitType from "split-type";
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Hero() {
-  gsap.registerPlugin(ScrollTrigger);
   useGSAP(() => {
     const split = new SplitType(".split", { types: "words,chars" });
 

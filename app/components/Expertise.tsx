@@ -9,6 +9,8 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 
+gsap.registerPlugin(ScrollTrigger);
+
 export default function Expertise() {
   const branding = [
     "Brand Strategy",
@@ -38,7 +40,6 @@ export default function Expertise() {
   ];
 
   useGSAP(() => {
-    gsap.registerPlugin(ScrollTrigger);
 
     const allPics = document.querySelectorAll(".expertise_pic");
     allPics.forEach((pic, idx, array) => {
