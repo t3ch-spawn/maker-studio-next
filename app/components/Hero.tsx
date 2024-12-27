@@ -12,26 +12,6 @@ import { CustomEase, ScrollTrigger } from "gsap/all";
 import SplitType from "split-type";
 
 export default function Hero() {
-  useEffect(() => {
-    // Initialize Lenis
-    const lenis = new Lenis({
-      autoRaf: true,
-    });
-
-    // // // Listen for the scroll event and remove opacity of nav
-    // lenis.on("scroll", (e) => {
-    //   if (e.direction === 1) {
-    //     gsap.to(".nav-desk", {
-    //       opacity: 0,
-    //     });
-    //   } else if (e.direction === -1) {
-    //     gsap.to(".nav-desk", {
-    //       opacity: 1,
-    //     });
-    //   }
-    // });
-  }, []);
-
   gsap.registerPlugin(ScrollTrigger);
   useGSAP(() => {
     const split = new SplitType(".split", { types: "words,chars" });
@@ -58,7 +38,7 @@ export default function Hero() {
           trigger: heading.classList.contains("hero") ? "body" : heading,
           start: "top 70%",
           end: "bottom 70%",
-          markers: true,
+          // markers: true,
         },
       });
     });
@@ -79,7 +59,7 @@ export default function Hero() {
           trigger: para.classList.contains("hero") ? "body" : para,
           start: "top 70%",
           end: "bottom 10%",
-          markers: true,
+          // markers: true,
           scrub: para.classList.contains("scrub") ? true : false,
         },
       });
