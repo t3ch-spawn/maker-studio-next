@@ -59,6 +59,10 @@ export default function Hero() {
         },
       });
     });
+
+    setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 1000);
   });
 
   // ease: CustomEase.create(
