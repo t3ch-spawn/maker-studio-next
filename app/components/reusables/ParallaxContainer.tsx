@@ -35,13 +35,13 @@ export default function ParallaxContainer({
       },
     });
 
-    setTimeout(() => {
-      ScrollTrigger.refresh();
-    }, 1000);
+    // setTimeout(() => {
+    //   ScrollTrigger.refresh();
+    // }, 1000);
 
     window.addEventListener("resize", () => {
       setContainerHeight();
-      ScrollTrigger.refresh();
+      // ScrollTrigger.refresh();
     });
   });
 
@@ -50,7 +50,7 @@ export default function ParallaxContainer({
       const picHeight = picRef.current.getBoundingClientRect().height;
       //   contRef.current.style.height = `${picHeight * 0.85}px`;
       setHeight(picHeight * 0.85);
-      ScrollTrigger.refresh();
+      // ScrollTrigger.refresh();
     }
   }
 

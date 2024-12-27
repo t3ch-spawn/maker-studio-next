@@ -60,7 +60,7 @@ export default function Hero() {
           start: "top 70%",
           end: "bottom 10%",
           // markers: true,
-          scrub: true,
+          // scrub: true,
         },
       });
     });
