@@ -106,7 +106,7 @@ export default function Hero() {
             </span>
             <span> 1, Global Digital Studio</span>
           </p>
-          <h1 className="big-para -968:max-w-[500px] max-w-[664px] leading-[110%] heading-anim hero split">
+          <h1 className="big-para -968:max-w-[500px] max-w-[706px] heading-anim hero split">
             We make things that move industries forward.
           </h1>
         </div>
