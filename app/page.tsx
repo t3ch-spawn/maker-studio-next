@@ -15,7 +15,7 @@ export default function Home() {
       <CustomCursor />
       <Navbar />
       <Hero />
-      <ParallaxContainer imgSrc={macbook} />
+      {/* <ParallaxContainer imgSrc={macbook} /> */}
       <About />
       <Works />
       <Expertise />
