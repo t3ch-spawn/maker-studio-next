@@ -142,6 +142,7 @@ body {
 
 .heading-anim {
   overflow: hidden;
+  padding-bottom: 3px;
 }
 
 .word,
