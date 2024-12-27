@@ -16,9 +16,10 @@ export default function Hero() {
   useGSAP(() => {
     const split = new SplitType(".split", { types: "words,chars" });
 
-    // window.addEventListener("resize", () => {
-    //   const split = new SplitType(".split", { types: "words,chars" });
-    // });
+    window.addEventListener("resize", () => {
+      // const split = new SplitType(".split", { types: "words,chars" });
+      ScrollTrigger.refresh();
+    });
     const allHeadings = document.querySelectorAll(".heading-anim");
     const allParas = document.querySelectorAll(".para-anim");
 
@@ -60,9 +61,9 @@ export default function Hero() {
       });
     });
 
-    setTimeout(() => {
-      ScrollTrigger.refresh();
-    }, 1000);
+    // setTimeout(() => {
+    //   ScrollTrigger.refresh();
+    // }, 1000);
   });
 
   // ease: CustomEase.create(
