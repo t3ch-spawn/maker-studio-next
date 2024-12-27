@@ -82,7 +82,7 @@ export default function Hero() {
           trigger: para.classList.contains("hero") ? "body" : para,
           start: "top 70%",
           end: "bottom 10%",
-          // markers: true,
+          markers: true,
           scrub: para.classList.contains("scrub") ? true : false,
         },
       });
