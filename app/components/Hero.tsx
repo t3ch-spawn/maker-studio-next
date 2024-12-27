@@ -28,7 +28,10 @@ export default function Hero() {
       gsap.from(heading.querySelectorAll(".word"), {
         y: 100,
         // filter: "blur(8px)",
-        ease: "power2.out",
+        ease: CustomEase.create(
+          "custom",
+          "M0,0 C0.077,0.345 0.076,0.486 0.113,0.641 0.127,0.707 0.165,0.817 0.203,0.855 0.222,0.874 0.263,0.909 0.286,0.922 0.336,0.951 0.39,0.967 0.463,0.976 0.522,0.983 0.593,1 0.684,1 0.77,1.002 0.873,1 1,1 "
+        ),
         duration: 2.2,
         opacity: 0,
 
@@ -43,20 +46,22 @@ export default function Hero() {
 
     // Animations for all small paragraphs, with or without scrub
     allParas.forEach((para) => {
-      gsap.set(para.querySelectorAll(".word"), { y: 50, opacity: 0 });
-      ScrollTrigger.create({
-        trigger: para.classList.contains("hero") ? "body" : para,
-        start: "top 70%",
-        end: "bottom 10%",
-        onEnter: () => {
-          gsap.to(para.querySelectorAll(".word"), {
-            y: 0,
-            // filter: "blur(8px)",
-            opacity: 1,
-            ease: "power2.out",
-            duration: 1.3,
-            stagger: 0.01,
-          });
+      gsap.from(para.querySelectorAll(".word"), {
+        y: 50,
+        // filter: "blur(8px)",
+        opacity: 0,
+        ease: CustomEase.create(
+          "custom",
+          "M0,0 C0.077,0.345 0.076,0.486 0.113,0.641 0.127,0.707 0.165,0.817 0.203,0.855 0.222,0.874 0.263,0.909 0.286,0.922 0.336,0.951 0.39,0.967 0.463,0.976 0.522,0.983 0.593,1 0.684,1 0.77,1.002 0.873,1 1,1 "
+        ),
+        duration: 1.3,
+        stagger: 0.01,
+        scrollTrigger: {
+          trigger: para.classList.contains("hero") ? "body" : para,
+          start: "top 70%",
+          end: "bottom 10%",
+          // markers: true,
+          scrub: para.classList.contains("scrub") ? true : false,
         },
       });
     });
@@ -65,11 +70,6 @@ export default function Hero() {
     //   ScrollTrigger.refresh();
     // }, 1000);
   });
-
-  // ease: CustomEase.create(
-  //   "custom",
-  //   "M0,0 C0.077,0.345 0.076,0.486 0.113,0.641 0.127,0.707 0.165,0.817 0.203,0.855 0.222,0.874 0.263,0.909 0.286,0.922 0.336,0.951 0.39,0.967 0.463,0.976 0.522,0.983 0.593,1 0.684,1 0.77,1.002 0.873,1 1,1 "
-  // ),
 
   return (
     <section className="bg-[#0F0F0F] h-[100vh] relative flex flex-col items-center gap-[50px] justify-end pt-[107px] pb-[58px]">
