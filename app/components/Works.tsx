@@ -87,13 +87,13 @@ export default function Works() {
       </div>
 
       {/* Big paragraph */}
-      <p className="big-para mx-auto text-white w-full max-w-[686px] mt-[60px] -768:my-[56px] text-center heading-anim split">
+      <p className="big-para mx-auto text-white w-full max-w-[686px] mt-[60px] -768:my-[56px] -768:max-w-[357px] text-center heading-anim split">
         {" "}
         We design and build lovable digital products
       </p>
 
       {/* Container for sections to pin */}
-      <div className="mt-[150px] works-screens-container">
+      <div className="mt-[150px] -768:mt-0 works-screens-container">
         {works.map((work, idx) => {
           return (
             <WorkScreen

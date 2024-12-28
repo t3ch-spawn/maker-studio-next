@@ -15,7 +15,7 @@ gsap.registerPlugin(Draggable);
 
 export default function Playground() {
   return (
-    <section className="bg-[#F2F2F2] pt-[150px] relative z-[15] pb-[30px]">
+    <section className="bg-[#F2F2F2] pt-[150px] relative z-[15] pb-[30px] -968:hidden">
       {/* Container for heading */}
       <div className="mx-auto flex gap-[16px] items-start w-fit mb-[155px]">
         <h1 className="mini-heading mt-[7px]">/ LAB</h1>

@@ -4,7 +4,10 @@ import ParallaxContainer from "./reusables/ParallaxContainer";
 
 export default function About() {
   return (
-    <section className="p-[24px] pb-[150px] bg-white section" id="about">
+    <section
+      className="p-[24px] -768:py-[20px] -768:px-[18px] pb-[150px] bg-white section"
+      id="about"
+    >
       {/* Container for mini heading */}
       <div className="w-full  font-medium flex items-center">
         <p>/</p>
@@ -30,7 +33,7 @@ export default function About() {
         {/* Picture on the left */}
         <ParallaxContainer
           imgSrc={about_pic}
-          className="max-w-[333px] -1024:mt-[72px]"
+          className="max-w-[333px] -1024:mt-[72px] -1024:self-center"
           imgClass="h-[440px] object-right object-cover "
         />
 

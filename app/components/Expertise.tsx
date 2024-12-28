@@ -62,7 +62,7 @@ export default function Expertise() {
   });
 
   return (
-    <section className="p-[24px] pb-[150px] bg-white section" id="expertise">
+    <section className="p-[24px] -768:px-[18px] pb-[150px] bg-white section" id="expertise">
       {/* HEading */}
       <h1 className="mini-heading flex w-full items-center">
         <p>/</p>

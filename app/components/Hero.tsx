@@ -61,7 +61,7 @@ export default function Hero() {
           start: "top 70%",
           end: "bottom 10%",
           // markers: true,
-          scrub: para.classList.contains("scrub") ? true : false,
+          scrub: para.classList.contains("scrub") ? 1.3 : false,
         },
       });
     });
@@ -81,7 +81,7 @@ export default function Hero() {
       />
 
       {/* Text container for heading and others */}
-      <div className="flex w-full justify-between items-end text-white px-[24px] ">
+      <div className="flex w-full justify-between items-end text-white px-[24px] -768:px-[18px]">
         {/* Left part with heading and paragraph */}
         <div className="flex flex-col gap-[19px] ">
           <p className="text-[13px] flex items-center font-ibm uppercase font-medium para-anim hero split nav-trigger">
