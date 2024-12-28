@@ -21,55 +21,59 @@ export default function Footer() {
       yPercent: -50,
     });
 
-    const allArrowLines = document.querySelectorAll(".arrow-line");
-    allArrowLines.forEach((line) => {
-      const arrows = line.querySelectorAll(".glitch-arrow");
+    const mm = gsap.matchMedia();
 
-      const timeline = gsap
-        .timeline({ paused: true })
-        .to(arrows, {
-          opacity: 0,
-          duration: 0.1,
-        })
+    mm.add("(min-width: 968px)", () => {
+      const allArrowLines = document.querySelectorAll(".arrow-line");
+      allArrowLines.forEach((line) => {
+        const arrows = line.querySelectorAll(".glitch-arrow");
 
-        .to(
-          line,
-          {
-            x: 33,
-          },
-          0
-        )
-        .to(
-          arrows,
-          {
-            opacity: 1,
-            duration: 0.1,
-          },
-          0.1
-        )
-
-        .to(
-          arrows,
-          {
+        const timeline = gsap
+          .timeline({ paused: true })
+          .to(arrows, {
             opacity: 0,
             duration: 0.1,
-          },
-          0.2
-        )
-        .to(
-          arrows[0],
-          {
-            opacity: 1,
-            duration: 0.1,
-          },
-          0.25
-        );
+          })
 
-      line.addEventListener("mouseenter", () => {
-        timeline.play();
-      });
-      line.addEventListener("mouseleave", () => {
-        timeline.reverse();
+          .to(
+            line,
+            {
+              x: 33,
+            },
+            0
+          )
+          .to(
+            arrows,
+            {
+              opacity: 1,
+              duration: 0.1,
+            },
+            0.1
+          )
+
+          .to(
+            arrows,
+            {
+              opacity: 0,
+              duration: 0.1,
+            },
+            0.2
+          )
+          .to(
+            arrows[0],
+            {
+              opacity: 1,
+              duration: 0.1,
+            },
+            0.25
+          );
+
+        line.addEventListener("mouseenter", () => {
+          timeline.play();
+        });
+        line.addEventListener("mouseleave", () => {
+          timeline.reverse();
+        });
       });
     });
   });
@@ -87,12 +91,12 @@ export default function Footer() {
           <h1 className="mt-[9px] -600:mt-0 line-anim arrow-line flex items-center gap-[12px]">
             <ArrowSvg
               stroke="white"
-              className="scale-[1.8] glitch-arrow  opacity-0 absolute right-[110%] top-[27%]"
+              className="scale-[1.8] glitch-arrow  opacity-0 -968:opacity-[1] absolute right-[110%] top-[27%]"
             />
             <p>Let's talk</p>
             <ArrowSvg
               stroke="white"
-              className="scale-[1.8] glitch-arrow  absolute left-[110%] top-[27%]"
+              className="scale-[1.8] glitch-arrow -968:opacity-0 absolute left-[110%] top-[27%]"
             />
           </h1>
         </div>

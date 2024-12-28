@@ -108,16 +108,16 @@ export default function Works() {
       {/* Reach out button */}
       <a
         href=""
-        className="flex justify-center items-center gap-[12px] line-anim arrow-line text-white mt-[147px] w-fit mx-auto "
+        className="flex justify-center items-center gap-[12px] line-anim arrow-line text-white mt-[147px] -768:mt-[56px] w-fit mx-auto "
       >
         <ArrowSvg
           stroke="white"
-          className="scale-[1.8] glitch-arrow opacity-0 absolute right-[110%] top-[27%]"
+          className="scale-[1.8] glitch-arrow opacity-0 -968:opacity-[1] absolute right-[110%] top-[27%]"
         />
-        <p className=" text-[24px] font-medium">Let's talk</p>
+        <p className=" text-[24px] font-medium -768:text-[16px]">Let's talk</p>
         <ArrowSvg
           stroke="white"
-          className="scale-[1.8] glitch-arrow absolute left-[110%] top-[27%]"
+          className="scale-[1.8] glitch-arrow absolute -968:opacity-0 left-[110%] top-[27%]"
         />
       </a>
     </section>
