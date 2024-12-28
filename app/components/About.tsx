@@ -15,11 +15,11 @@ export default function About() {
       </div>
 
       {/*Container for big paragraph */}
-      <div className="flex flex-col  mt-[80px] -768:mt-[56px] justify-center w-full big-para ">
-        <p className="heading-anim split pl-[12.5vw] -968:pl-0">
+      <div className="flex flex-col  mt-[80px] -768:mt-[56px] justify-center w-full big-para heading-anim split">
+        <p className=" pl-[12.5vw] -968:pl-0">
           We deliver exceptional product execution
         </p>
-        <p className="heading-anim split w-[90%] -600:w-full text-left">
+        <p className=" w-[90%] -600:w-full text-left">
           that transforms founders’ ambitions into reality, guiding companies
           from concept to launch.
         </p>
