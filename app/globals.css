@@ -151,7 +151,8 @@ body {
 
 .word,
 .heading-anim,
-.para-anim {
+.para-anim,
+.char {
   will-change: transform;
 }
 
