@@ -26,6 +26,10 @@ export default function Navbar() {
   const navMobTimeline = useRef<GSAPTimeline>(null);
 
   useEffect(() => {
+    const lenis = new Lenis({
+      autoRaf: true,
+    });
+
     function formatDate(): string {
       const now: Date = new Date();
 
@@ -157,10 +161,6 @@ export default function Navbar() {
             navLinkCont?.classList.remove("passed-hero");
           },
         },
-      });
-
-      const lenis = new Lenis({
-        autoRaf: true,
       });
 
       // // Listen for the scroll event and return list back to menu
