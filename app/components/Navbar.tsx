@@ -288,7 +288,7 @@ export default function Navbar() {
       </nav>
 
       {/* Container for nav mobile list */}
-      <div className="fixed flex h-[100vh] w-full  text-white bg-black z-[100] translate-y-[-100%] nav-drawer overflow-hidden pointer-events-none">
+      <div className="fixed flex h-full w-full  text-white bg-black z-[100] translate-y-[-100%] nav-drawer overflow-hidden pointer-events-none">
         {/* Container for cont */}
         <div className="fixed inset-0 w-full h-full flex flex-col justify-between items-start px-[18px] py-[20px] nav-drawer-content translate-y-[100%]">
           {/* Container for logo and close button */}
