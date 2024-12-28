@@ -112,12 +112,12 @@ export default function Works() {
       >
         <ArrowSvg
           stroke="white"
-          className="scale-[1.8] glitch-arrow opacity-0 -968:opacity-[1] absolute right-[110%] top-[27%]"
+          className="scale-[1.8] -768:scale-[1.2] -768:top-[12%] -768:right-[105%] glitch-arrow opacity-0 -968:opacity-[1] absolute right-[110%] top-[27%]"
         />
         <p className=" text-[24px] font-medium -768:text-[16px]">Let's talk</p>
         <ArrowSvg
           stroke="white"
-          className="scale-[1.8] glitch-arrow absolute -968:opacity-0 left-[110%] top-[27%]"
+          className="scale-[1.8] -768:scale-[1.2] -768:top-[12%] -768:left-[105%] glitch-arrow absolute -968:opacity-0 left-[110%] top-[27%]"
         />
       </a>
     </section>

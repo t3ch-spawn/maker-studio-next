@@ -88,15 +88,15 @@ export default function Footer() {
         {/* Heading */}
         <div className="max-w-[295px] text-4xl -600:text-[24px] cursor-pointer leading-[100%] -600:leading-[120%]">
           <h1>Starting a project? </h1>
-          <h1 className="mt-[9px] -600:mt-0 line-anim arrow-line flex items-center gap-[12px]">
+          <h1 className="mt-[9px] -600:mt-0 line-anim arrow-line flex items-center gap-[12px] -768:translate-x-[29%] ">
             <ArrowSvg
               stroke="white"
-              className="scale-[1.8] glitch-arrow  opacity-0 -968:opacity-[1] absolute right-[110%] top-[27%]"
+              className="scale-[1.8] -768:scale-[1.4] -768:top-[20%] -768:right-[107%] glitch-arrow  opacity-0 -968:opacity-[1] absolute right-[110%] top-[27%]"
             />
             <p>Let's talk</p>
             <ArrowSvg
               stroke="white"
-              className="scale-[1.8] glitch-arrow -968:opacity-0 absolute left-[110%] top-[27%]"
+              className="scale-[1.8] -768:scale-[1.4] glitch-arrow -968:opacity-0 absolute left-[110%] top-[27%]"
             />
           </h1>
         </div>
