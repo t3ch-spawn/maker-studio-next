@@ -280,7 +280,7 @@ export default function Navbar() {
           onClick={() => {
             navMobTimeline.current?.play();
           }}
-          className="flex mini-heading gap-[5px] items-center justify-center invert"
+          className="mini-heading gap-[5px] items-center justify-center invert hidden -768:flex"
         >
           <div className="bg-white h-[5px] w-[5px] rounded-full"></div>
           <p>MENU</p>

@@ -25,7 +25,7 @@ export default function Hero() {
 
     // Animations for all big paragraphs
     allHeadings.forEach((heading, idx) => {
-      gsap.from(heading.querySelectorAll(".word"), {
+      gsap.from(heading.querySelectorAll(".char"), {
         y: 100,
         // filter: "blur(8px)",
         ease: CustomEase.create(
@@ -39,14 +39,14 @@ export default function Hero() {
           trigger: heading.classList.contains("hero") ? "body" : heading,
           start: "top 70%",
           end: "bottom 70%",
-          // markers: true,
+          markers: true,
         },
       });
     });
 
     // Animations for all small paragraphs, with or without scrub
     allParas.forEach((para) => {
-      gsap.from(para.querySelectorAll(".word"), {
+      gsap.from(para.querySelectorAll(".char"), {
         y: 50,
         // filter: "blur(8px)",
         opacity: 0,
@@ -55,7 +55,7 @@ export default function Hero() {
           "M0,0 C0.077,0.345 0.076,0.486 0.113,0.641 0.127,0.707 0.165,0.817 0.203,0.855 0.222,0.874 0.263,0.909 0.286,0.922 0.336,0.951 0.39,0.967 0.463,0.976 0.522,0.983 0.593,1 0.684,1 0.77,1.002 0.873,1 1,1 "
         ),
         duration: 1.3,
-        stagger: 0.01,
+        stagger: 0.005,
         scrollTrigger: {
           trigger: para.classList.contains("hero") ? "body" : para,
           start: "top 70%",

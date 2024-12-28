@@ -159,6 +159,10 @@ body {
   will-change: transform;
 }
 
+.word {
+  overflow: hidden;
+}
+
 .nav-reachout::before {
   position: absolute;
   content: "";
