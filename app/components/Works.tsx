@@ -171,7 +171,7 @@ function WorkScreen({
 
   return (
     <div
-      className={`min-h-[90vh] max-h-[850px] relative works-screen flex items-end p-[28px] ${className}`}
+      className={`min-h-[90vh] -768:max-h-[600px] max-h-[850px] relative works-screen flex items-end p-[28px] ${className}`}
     >
       {/* <ParallaxContainer
         percent={-20}
@@ -187,19 +187,19 @@ function WorkScreen({
       {/* Div that has the dark background */}
       <div className="absolute inset-0 bg-[#0000005C] w-full h-full z-1"></div>
 
-      <div className="absolute translate-x-[-50%] translate-y-[-50%] left-[50%] w-fit top-[50%] text-white text-center -1024:text-[40px] heading-anim split text-[56px]">
+      <div className="absolute translate-x-[-50%] translate-y-[-50%] left-[50%] w-full top-[50%] text-white text-center -1024:text-[40px] heading-anim split text-[56px] -600:text-[36px] leading-[102.7%]">
         {heading}
       </div>
 
       {/* Container for details and description on the bottom of the screen */}
       <div className="flex w-full justify-between items-end z-[2] -768:flex-col-reverse -768:items-start relative -768:gap-[24px]">
         {/* Container for details */}
-        <div className="flex justify-center items-center gap-[12px]">
+        <div className="flex justify-center items-center gap-[12px] flex-wrap">
           {details.map((detail, idx) => {
             return (
               <div
                 key={idx}
-                className="bg-[#FFFFFF29] text-[#FFFFFFB2] rounded-full py-[8px] px-[16px] text-[13px] font-ibm uppercase cursor-pointer detail-pill"
+                className="bg-[#FFFFFF29] text-[#FFFFFFB2] rounded-full py-[8px] px-[16px] text-[13px] -600:text-[11px] -600:px-[14px] font-ibm uppercase cursor-pointer detail-pill"
               >
                 {detail}
               </div>
@@ -207,7 +207,9 @@ function WorkScreen({
           })}
         </div>
         {/*  Container for description on the right*/}
-        <p className="max-w-[308px] text-[#FFFFFFB2] font-normal ">{descrip}</p>
+        <p className="max-w-[308px] text-[#FFFFFFB2] font-normal -600:text-[13px]">
+          {descrip}
+        </p>
       </div>
     </div>
   );
