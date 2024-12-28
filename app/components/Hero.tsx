@@ -39,7 +39,7 @@ export default function Hero() {
           trigger: heading.classList.contains("hero") ? "body" : heading,
           start: "top 70%",
           end: "bottom 70%",
-          markers: true,
+          // markers: true,
         },
       });
     });
