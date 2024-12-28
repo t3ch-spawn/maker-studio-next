@@ -194,7 +194,7 @@ function WorkScreen({
       {/* Container for details and description on the bottom of the screen */}
       <div className="flex w-full justify-between items-end z-[2] -768:flex-col-reverse -768:items-start relative -768:gap-[24px]">
         {/* Container for details */}
-        <div className="flex justify-center items-center gap-[12px] flex-wrap">
+        <div className="flex justify-start items-center gap-[12px] flex-wrap">
           {details.map((detail, idx) => {
             return (
               <div
