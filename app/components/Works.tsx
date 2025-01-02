@@ -16,38 +16,71 @@ export default function Works() {
   useGSAP(() => {
     const allScreens = document.querySelectorAll(".works-screen");
 
-    allScreens.forEach((screen, idx, array) => {
-      gsap.to(screen, {
-        scrollTrigger: {
-          trigger: screen,
-          scrub: true,
-          start: "top 20%",
-          end: "bottom 20%",
-          //   markers: true,
-        },
-        onStart: () => {
-          gsap.to(screen, {
-            position: "sticky",
-            top: 40 + idx * 30,
-            duration: 0,
-          });
+    // allScreens.forEach((screen, idx, array) => {
+    //   gsap.to(screen, {
+    //     scrollTrigger: {
+    //       trigger: screen,
+    //       scrub: true,
+    //       start: "top 20%",
+    //       end: "bottom 20%",
+    //       //   markers: true,
+    //     },
+    //     onStart: () => {
+    //       gsap.to(screen, {
+    //         position: "sticky",
+    //         top: 40 + idx * 30,
+    //         duration: 0,
+    //       });
 
-          if (idx === 2) {
-            allScreens.forEach((screen, idx) => {
-              gsap.to(screen, {
-                y: idx !== 2 ? -200 + idx * 100 : 0,
-                scrollTrigger: {
-                  trigger: allScreens[2],
-                  scrub: true,
-                  start: "top 15%",
-                },
-              });
-            });
-          }
-        },
-        scale: 0.97 + 0.02 * idx,
-        transformOrigin: "center",
+    //       if (idx === 2) {
+    //         allScreens.forEach((screen, idx) => {
+    //           gsap.to(screen, {
+    //             y: idx !== 2 ? -200 + idx * 100 : 0,
+    //             scrollTrigger: {
+    //               trigger: allScreens[2],
+    //               scrub: true,
+    //               start: "top 15%",
+    //             },
+    //           });
+    //         });
+    //       }
+    //     },
+    //     scale: 0.97 + 0.02 * idx,
+    //     transformOrigin: "center",
+    //   });
+    // });
+
+    // Pinning animation for
+  });
+
+  useGSAP(() => {
+    const allScreens = document.querySelectorAll<HTMLElement>(".works-screen");
+    const cardHeight = allScreens[0].offsetHeight;
+
+    const animation = gsap.timeline();
+    allScreens.forEach((card, idx) => {
+      gsap.set(card, {
+        y: cardHeight * idx + 100,
+        scale: 1,
       });
+
+      animation.to(card, {
+        y: 0 + idx * 20,
+        duration: 0.1,
+        scale: 0.93 + 0.02 * idx,
+        ease: "none",
+      });
+    });
+
+    ScrollTrigger.create({
+      trigger: ".works-screens-container",
+      pin: true,
+      start: "top 5%",
+      end: `+=${cardHeight * allScreens.length}`,
+      // markers: true,
+      scrub: true,
+      animation: animation,
+      invalidateOnRefresh: true,
     });
   });
 
@@ -93,15 +126,9 @@ export default function Works() {
       </p>
 
       {/* Container for sections to pin */}
-      <div className="mt-[150px] -768:mt-0 works-screens-container">
+      <div className="mt-[150px] -768:mt-0 min-h-[90vh] works-screens-container relative">
         {works.map((work, idx) => {
-          return (
-            <WorkScreen
-              key={idx}
-              {...work}
-              className={idx !== 0 ? "mt-[300px]" : ""}
-            />
-          );
+          return <WorkScreen key={idx} {...work} />;
         })}
       </div>
 
@@ -171,7 +198,7 @@ function WorkScreen({
 
   return (
     <div
-      className={`min-h-[90vh] -768:max-h-[600px] max-h-[850px] relative works-screen flex items-end p-[28px] ${className}`}
+      className={`min-h-[90vh] w-full top-0 absolute -768:max-h-[600px] max-h-[850px]  works-screen flex items-end p-[28px] ${className}`}
     >
       {/* <ParallaxContainer
         percent={-20}
