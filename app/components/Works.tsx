@@ -67,7 +67,7 @@ export default function Works() {
       animation.to(card, {
         y: 0 + idx * 20,
         duration: 0.1,
-        scale: 0.93 + 0.02 * idx,
+        scale: 0.97 + 0.02 * idx,
         ease: "none",
       });
     });
@@ -76,7 +76,7 @@ export default function Works() {
       trigger: ".works-screens-container",
       pin: true,
       start: "top 5%",
-      end: `+=${cardHeight * allScreens.length}`,
+      end: `+=${cardHeight * allScreens.length + (cardHeight / 3)}`,
       // markers: true,
       scrub: true,
       animation: animation,
