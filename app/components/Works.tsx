@@ -60,8 +60,11 @@ export default function Works() {
     const animation = gsap.timeline();
     allScreens.forEach((card, idx) => {
       gsap.set(card, {
-        y: cardHeight * idx + 100,
+        y: idx > 0 ? cardHeight * idx + 100 : 0,
         scale: 1,
+        onComplete: () => {
+          ScrollTrigger.refresh();
+        },
       });
 
       animation.to(card, {
@@ -76,11 +79,11 @@ export default function Works() {
       trigger: ".works-screens-container",
       pin: true,
       start: "top 5%",
-      end: `+=${cardHeight * allScreens.length + (cardHeight / 3)}`,
-      // markers: true,
+      end: `+=${cardHeight * allScreens.length + cardHeight / 3}`,
+      markers: true,
       scrub: true,
       animation: animation,
-      invalidateOnRefresh: true,
+      // invalidateOnRefresh: true,
     });
   });
 
@@ -120,13 +123,13 @@ export default function Works() {
       </div>
 
       {/* Big paragraph */}
-      <p className="big-para mx-auto text-white w-full max-w-[686px] mt-[60px] -768:my-[56px] -768:max-w-[357px] text-center heading-anim split">
+      <p className="big-para mx-auto text-white w-full max-w-[686px] mt-[60px] -768:my-[56px] -768:mb-[0px] -768:max-w-[357px] text-center heading-anim split">
         {" "}
         We design and build lovable digital products
       </p>
 
       {/* Container for sections to pin */}
-      <div className="mt-[150px] -768:mt-0 min-h-[90vh] works-screens-container relative">
+      <div className="mt-[150px] -768:mt-[64px] min-h-[90vh] works-screens-container relative">
         {works.map((work, idx) => {
           return <WorkScreen key={idx} {...work} />;
         })}
@@ -209,6 +212,9 @@ function WorkScreen({
         src={img}
         alt=""
         className="absolute w-full h-full top-0 left-0 object-cover"
+        onLoad={() => {
+          ScrollTrigger.refresh();
+        }}
       />
 
       {/* Div that has the dark background */}

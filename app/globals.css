@@ -171,3 +171,9 @@ body {
   height: 1px;
   background-color: white;
 }
+
+/* @media (max-width: 768px) {
+  .pin-spacer {
+    margin-top: 64px !important;
+  }
+} */
