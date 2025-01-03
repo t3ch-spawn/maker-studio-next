@@ -11,7 +11,7 @@ import CustomCursor from "./components/CustomCursor";
 
 export default function Home() {
   return (
-    <main className="tracking-[-0.005em]">
+    <main className="tracking-[-0.005em] font-grotesk">
       <CustomCursor />
       <Navbar />
       <Hero />
