@@ -112,7 +112,7 @@ export default function Expertise() {
           <hr className="border-[#0000001A] w-full" />
 
           {/* Branding */}
-          <div className="flex justify-between w-full max-w-[48vw] -1024:max-w-full ml-auto -968:ml-0 gap-[9vw]  -968:mb-0 -1024:flex-col -1024:gap-[24px]">
+          <div className="flex justify-between w-full max-w-[44.6vw] -1024:max-w-full ml-auto -968:ml-0 gap-[9vw]  -968:mb-0 -1024:flex-col -1024:gap-[24px]">
             <h2 className=" font-medium  -1024:w-fit -600:mb-0 font-ibm uppercase text-[13px]">
               Branding
             </h2>
@@ -137,7 +137,7 @@ export default function Expertise() {
           <hr className="border-[#0000001A] w-full mt-[15px]" />
 
           {/* Creative Design */}
-          <div className="flex justify-between w-full max-w-[48vw] -1024:max-w-full ml-auto -968:ml-0 gap-[9vw]  -968:mb-0 -1024:flex-col -1024:gap-[24px]">
+          <div className="flex justify-between w-full max-w-[44.6vw] -1024:max-w-full ml-auto -968:ml-0 gap-[9vw]  -968:mb-0 -1024:flex-col -1024:gap-[24px]">
             <h2 className=" font-medium  -1024:w-fit -600:mb-0 font-ibm uppercase text-[13px]">
               Creative Design
             </h2>
@@ -162,7 +162,7 @@ export default function Expertise() {
           <hr className="border-[#0000001A] w-full mt-[15px] -968:mt-0" />
 
           {/* Product Development */}
-          <div className="flex justify-between w-full max-w-[48vw] -1024:max-w-full ml-auto -968:ml-0  gap-[9vw]  -968:mb-0 -1024:flex-col -1024:gap-[24px]">
+          <div className="flex justify-between w-full max-w-[44.6vw] -1024:max-w-full ml-auto -968:ml-0  gap-[9vw]  -968:mb-0 -1024:flex-col -1024:gap-[24px]">
             <h2 className=" font-medium  -1024:w-fit -600:mb-0 font-ibm uppercase text-[13px]">
               Product Development
             </h2>

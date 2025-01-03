@@ -9,6 +9,8 @@ import ArrowSvg from "./reusables/ArrowSvg";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
   useGSAP(() => {
     // parallax effect for footer
     gsap.from(".main-footer-container", {
@@ -166,7 +168,7 @@ export default function Footer() {
 
         {/* Credits */}
         <div className="flex justify-between mini-heading text-[#FFFFFF66] mt-[122px]">
-          <p>© THE Maker STUDIO 2024</p>
+          <p>© THE Maker STUDIO {currentYear}</p>
           <a href="#" className="line-anim">
             DEv BY TIFE
           </a>
