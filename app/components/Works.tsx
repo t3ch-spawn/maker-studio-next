@@ -83,7 +83,7 @@ export default function Works() {
       // markers: true,
       scrub: true,
       animation: animation,
-      // invalidateOnRefresh: true,
+      refreshPriority: 1, 
     });
   });
 
@@ -224,7 +224,7 @@ function WorkScreen({
       {/* Div that has the dark background */}
       <div className="absolute inset-0 bg-[#0000005C] w-full h-full z-1"></div>
 
-      <div className="absolute translate-x-[-50%] translate-y-[-50%] font-medium left-[50%] w-full top-[50%] text-white text-center -1024:text-[40px] heading-anim split text-[56px] -600:text-[36px] leading-[102.7%]">
+      <div className="absolute translate-x-[-50%] translate-y-[-50%] font-medium left-[50%] w-full top-[50%] text-white text-center -1024:text-[40px] text-[56px] -600:text-[36px] leading-[102.7%]">
         {heading}
       </div>
 

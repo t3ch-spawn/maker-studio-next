@@ -34,12 +34,16 @@ export default function Hero() {
         ),
         duration: 2.2,
         opacity: 0,
+        onComplete: () => {
+          ScrollTrigger.refresh();
+        },
 
         scrollTrigger: {
           trigger: heading.classList.contains("hero") ? "body" : heading,
           start: "top 70%",
           end: "bottom 70%",
           // markers: true,
+          refreshPriority: -1,
         },
       });
     });
@@ -62,6 +66,7 @@ export default function Hero() {
           end: "bottom 10%",
           // markers: true,
           scrub: para.classList.contains("scrub") ? 1.5 : false,
+          refreshPriority: -1,
         },
       });
     });
