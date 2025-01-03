@@ -141,6 +141,10 @@
   /* overflow: hidden; */
 }
 
+.heading-anim{
+  overflow: hidden;
+}
+
 .nav-reachout::before {
   position: absolute;
   content: "";
