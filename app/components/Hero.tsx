@@ -40,8 +40,8 @@ export default function Hero() {
 
         scrollTrigger: {
           trigger: heading.classList.contains("hero") ? "body" : heading,
-          start: "top 70%",
-          end: "bottom 70%",
+          start: "top 85%",
+          end: "bottom 85%",
           // markers: true,
           refreshPriority: -1,
         },

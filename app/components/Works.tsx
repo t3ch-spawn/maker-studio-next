@@ -82,8 +82,19 @@ export default function Works() {
       end: `+=${cardHeight * allScreens.length + cardHeight / 3}`,
       // markers: true,
       scrub: true,
+      // animation: animation,
+      refreshPriority: 1,
+    });
+
+    ScrollTrigger.create({
+      trigger: ".works-screens-container",
+      // pin: true, 
+      start: "top 50%",
+      end: `+=${cardHeight * allScreens.length + cardHeight / 3}`,
+      // markers: true,
+      scrub: true,
       animation: animation,
-      refreshPriority: 1, 
+      refreshPriority: 1,
     });
   });
 
