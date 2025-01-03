@@ -4,10 +4,10 @@ import React, { useEffect } from "react";
 import nomba from "../assets/images/nomba.png";
 import nqr from "../assets/images/nqr.png";
 import station from "../assets/images/station.png";
+import arrow_right from "../assets/images/arrow-right.png";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import ArrowSvg from "./reusables/ArrowSvg";
 import Image, { StaticImageData } from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -140,14 +140,18 @@ export default function Works() {
         href=""
         className="flex justify-center items-center gap-[12px] line-anim arrow-line text-white mt-[147px] -768:mt-[106px] w-fit mx-auto "
       >
-        <ArrowSvg
-          stroke="white"
-          className="scale-[1.8] -768:scale-[1.2] -768:top-[12%] -768:right-[105%] glitch-arrow opacity-0 -968:opacity-[1] absolute right-[110%] top-[27%]"
+        <Image
+          src={arrow_right}
+          alt="arrow"
+          className="w-[24px] -768:top-[12%] -768:right-[105%] glitch-arrow opacity-0 -968:opacity-[1] absolute right-[108%] top-[20%] -768:w-[20px]"
         />
+
         <p className=" text-[24px] font-medium -768:text-[16px]">Let's talk</p>
-        <ArrowSvg
-          stroke="white"
-          className="scale-[1.8] -768:scale-[1.2] -768:top-[12%] -768:left-[105%] glitch-arrow absolute -968:opacity-0 left-[110%] top-[27%]"
+
+        <Image
+          src={arrow_right}
+          alt="arrow"
+          className="w-[24px] -768:top-[12%] -768:left-[105%] glitch-arrow absolute -968:opacity-0 left-[108%] top-[20%] -768:w-[20px]"
         />
       </a>
     </section>

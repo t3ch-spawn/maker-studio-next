@@ -6,8 +6,8 @@ import ai from "../assets/images/play_ai.png";
 import balloon from "../assets/images/play_balloon.png";
 import nomba_play from "../assets/images/nomba_play.png";
 import nqr_play from "../assets/images/nqr_play.png";
+import alerts_play from "../assets/images/alerts_play.png";
 import Draggable from "gsap/Draggable";
-// import InertiaPlugin from "gsap/InertiaPlugin";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import Image, { StaticImageData } from "next/image";
@@ -36,26 +36,32 @@ export default function Playground() {
         <PlaySquare
           imgSrc={ai}
           imgClass="h-[400px] w-[450px]"
-          descrip={"station asset"}
-          className="translate-x-[200%] translate-y-[10%]"
+          descrip={"NEURABASE HERO"}
+          className="translate-x-[20%] translate-y-[150%]"
         />
         <PlaySquare
           imgSrc={balloon}
-          imgClass="h-[400px] w-[450px]"
+          imgClass="w-[292px] h-[260px]"
           descrip={"station asset"}
-          className="translate-x-[10%] translate-y-[10%]"
+          className="translate-x-[370%] translate-y-[70%]"
         />
         <PlaySquare
           imgSrc={nomba_play}
           imgClass="h-[312px] w-[530px]"
-          descrip={"nomba features"}
-          className="translate-x-[170%] translate-y-[170%]"
+          descrip={"Expense FEATURES"}
+          className="translate-x-[80%] translate-y-[70%]"
         />
         <PlaySquare
           imgSrc={nqr_play}
           imgClass="h-[447px] w-[196px]"
           descrip={"Nqr connected accounts"}
-          className="translate-x-[70%] translate-y-[120%]"
+          className="translate-x-[350%] translate-y-[100%]"
+        />
+        <PlaySquare
+          imgSrc={alerts_play}
+          imgClass="w-[416px] h-[323]px]"
+          descrip={"alerts - IF"}
+          className="translate-x-[230%] translate-y-[170%]"
         />
       </div>
     </section>
