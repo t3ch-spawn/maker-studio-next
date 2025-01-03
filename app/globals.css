@@ -43,7 +43,7 @@ body {
   }
 
   .big-para {
-    @apply text-[60px] font-medium leading-[105%] -1024:text-[40px] -600:text-[28px];
+    @apply text-[60px] font-medium leading-[110%] -1024:text-[40px] -600:text-[28px];
   }
 }
 

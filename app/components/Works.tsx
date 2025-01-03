@@ -80,7 +80,7 @@ export default function Works() {
       pin: true,
       start: "top 5%",
       end: `+=${cardHeight * allScreens.length + cardHeight / 3}`,
-      markers: true,
+      // markers: true,
       scrub: true,
       animation: animation,
       // invalidateOnRefresh: true,
@@ -138,7 +138,7 @@ export default function Works() {
       {/* Reach out button */}
       <a
         href=""
-        className="flex justify-center items-center gap-[12px] line-anim arrow-line text-white mt-[147px] -768:mt-[56px] w-fit mx-auto "
+        className="flex justify-center items-center gap-[12px] line-anim arrow-line text-white mt-[147px] -768:mt-[106px] w-fit mx-auto "
       >
         <ArrowSvg
           stroke="white"
