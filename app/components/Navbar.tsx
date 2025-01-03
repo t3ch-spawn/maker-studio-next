@@ -234,46 +234,49 @@ export default function Navbar() {
         {/* 'Logo" */}
         <p className="text-[16px] font-medium invert">The Maker Studio</p>
 
-        {/* TIme in the middle */}
-        <p className="text-[13px] font-medium font-ibm invert -768:hidden">
-          LOS, {date}
-        </p>
+        {/* Container for time and menu list for desktop */}
+        <div className="flex justify-between w-full max-w-[44.6vw]">
+          {/* TIme in the middle */}
+          <p className="text-[13px] font-medium font-ibm invert -768:hidden ">
+            LOS, {date}
+          </p>
 
-        {/* Container for Menu and list items for desktop view*/}
-        <div className="flex flex-col items-end -768:hidden">
-          <button
-            onClick={() => {
-              if (!navDeskTimeline.current) return;
-              navDeskTimeline.current.reverse();
-            }}
-            className="flex font-medium font-ibm gap-[5px] items-center justify-center invert menu-btn-desk translate-y-[20px] opacity-0 pointer-events-none text-[13px]"
-          >
-            <div className="bg-white h-[5px] w-[5px] rounded-full"></div>
-            <p>MENU</p>
-          </button>
+          {/* Container for Menu and list items for desktop view*/}
+          <div className="flex flex-col items-end -768:hidden">
+            <button
+              onClick={() => {
+                if (!navDeskTimeline.current) return;
+                navDeskTimeline.current.reverse();
+              }}
+              className="flex font-medium font-ibm gap-[5px] items-center justify-center invert menu-btn-desk translate-y-[20px] opacity-0 pointer-events-none text-[13px]"
+            >
+              <div className="bg-white h-[5px] w-[5px] rounded-full"></div>
+              <p>MENU</p>
+            </button>
 
-          {/* List on the right */}
-          <ul className="flex flex-col gap-[5px] items-end font-medium text-[13px] font-ibm nav-link-container translate-y-[-20px]">
-            {navLinks.map((link, idx) => {
-              return (
-                <li
-                  key={idx}
-                  data-id={link.id}
-                  className="relative nav-link nav-click ease-in-out duration-300 overflow-hidden pointer-events-all"
-                >
-                  <div className="flex gap-[5px] items-center justify-center">
-                    <ArrowSvg
-                      className={`nav-arrow scale-75 opacity-0 translate-x-[10px] duration-300`}
-                    />
-                    <p className="uppercase invert cursor-pointer ">
-                      {" "}
-                      {link.name}
-                    </p>
-                  </div>
-                </li>
-              );
-            })}
-          </ul>
+            {/* List on the right */}
+            <ul className="flex flex-col gap-[5px] items-end font-medium text-[13px] font-ibm nav-link-container translate-y-[-20px]">
+              {navLinks.map((link, idx) => {
+                return (
+                  <li
+                    key={idx}
+                    data-id={link.id}
+                    className="relative nav-link nav-click ease-in-out duration-300 overflow-hidden pointer-events-all"
+                  >
+                    <div className="flex gap-[5px] items-center justify-center">
+                      <ArrowSvg
+                        className={`nav-arrow scale-75 opacity-0 translate-x-[10px] duration-300`}
+                      />
+                      <p className="uppercase invert cursor-pointer ">
+                        {" "}
+                        {link.name}
+                      </p>
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
         </div>
 
         {/* Trigger for nav mobile list */}

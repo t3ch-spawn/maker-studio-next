@@ -1,9 +1,11 @@
-'use client'
+"use client";
 
 import React, { useRef } from "react";
 import grid from "../assets/images/playground_grid.png";
 import ai from "../assets/images/play_ai.png";
 import balloon from "../assets/images/play_balloon.png";
+import nomba_play from "../assets/images/nomba_play.png";
+import nqr_play from "../assets/images/nqr_play.png";
 import Draggable from "gsap/Draggable";
 // import InertiaPlugin from "gsap/InertiaPlugin";
 import gsap from "gsap";
@@ -44,15 +46,15 @@ export default function Playground() {
           className="translate-x-[10%] translate-y-[10%]"
         />
         <PlaySquare
-          imgSrc={ai}
-          imgClass="h-[259px] w-[333px]"
-          descrip={"station asset"}
+          imgSrc={nomba_play}
+          imgClass="h-[312px] w-[530px]"
+          descrip={"nomba features"}
           className="translate-x-[170%] translate-y-[170%]"
         />
         <PlaySquare
-          imgSrc={balloon}
-          imgClass="h-[259px] w-[333px]"
-          descrip={"station asset"}
+          imgSrc={nqr_play}
+          imgClass="h-[447px] w-[196px]"
+          descrip={"Nqr connected accounts"}
           className="translate-x-[70%] translate-y-[120%]"
         />
       </div>
@@ -68,7 +70,6 @@ interface SquareTypes {
 }
 
 function PlaySquare({ descrip, imgClass, imgSrc, className }: SquareTypes) {
-
   const squareRef = useRef<HTMLDivElement>(null);
   const velocity = useRef({ x: 0, y: 0 }); // Store velocity for inertia
   const lastPos = useRef({ x: 0, y: 0 }); // Store last position

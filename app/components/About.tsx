@@ -38,7 +38,7 @@ export default function About() {
         />
 
         {/* Typography on the right */}
-        <div className="flex flex-col gap-[96px] -1024:gap-[48px] w-full max-w-[686px] -1200:max-w-[580px] -1024:max-w-full text-[18px] -768:text-[16px] leading-[138.8%]">
+        <div className="flex flex-col gap-[96px] -1024:gap-[48px] w-full max-w-[44.6vw] -1200:max-w-[580px] -1024:max-w-full text-[18px] -768:text-[16px] leading-[138.8%]">
           <div className="flex gap-[50px] w-full justify-between items-start -1024:flex-col -1024:gap-[20px]">
             <p className=" font-medium para-anim split">Legacy of Innovation</p>
             <p className="max-w-[333px] -1024:max-w-[600px] text-[#00000099] para-anim scrub split">
