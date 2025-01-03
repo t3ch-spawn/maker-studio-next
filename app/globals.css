@@ -138,10 +138,11 @@
 }
 
 .word {
-  /* overflow: hidden; */
+  overflow: hidden;
+  vertical-align: bottom;
 }
 
-.heading-anim{
+.heading-anim {
   overflow: hidden;
 }
 
